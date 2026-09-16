@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4096 — ULUG'BEK.R</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-wrapper">
+
+        <header class="header">
+            <div>
+                <h1>4096</h1>
+                <p class="subtitle">Raqamlarni birlashtir va 2048 ga yet!</p>
+            </div>
+
+            <button id="themeBtn" class="icon-btn" title="Rejimni almashtirish">
+                🌙
+            </button>
+        </header>
+
+        <!-- Player -->
+        <section id="startScreen" class="start-screen">
+            <div class="player-icon">👤</div>
+            <h2>O'yinni boshlang</h2>
+            <p>Ismingizni kiriting</p>
+
+            <input
+                type="text"
+                id="playerName"
+                placeholder="Ismingiz..."
+                maxlength="20"
+                autocomplete="off"
+            >
+
+            <button id="startBtn" class="main-btn">
+                O'ynash 🚀
+            </button>
+        </section>
+
+        <!-- Game -->
+        <main id="gameScreen" class="hidden">
+
+            <div class="top-info">
+                <div class="player-box">
+                    <span>O'yinchi</span>
+                    <strong id="playerDisplay">Player</strong>
+                </div>
+
+                <div class="score-container">
+                    <div class="score-box">
+                        <span>SCORE</span>
+                        <strong id="score">0</strong>
+                    </div>
+
+                    <div class="score-box">
+                        <span>BEST</span>
+                        <strong id="bestScore">0</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="restartBtn" class="restart-btn">
+                    🔄 Qayta boshlash
+                </button>
+
+                <button id="changePlayerBtn" class="small-btn">
+                    👤 Ism
+                </button>
+            </div>
+
+            <div class="game-board" id="gameBoard">
+                <div class="grid-background">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+
+                <div id="tiles"></div>
+
+                <div id="gameMessage" class="game-message hidden">
+                    <h2 id="messageTitle">Game Over!</h2>
+                    <p id="messageText"></p>
+                    <button id="tryAgainBtn" class="main-btn">
+                        🔄 Yana o'ynash
+                    </button>
+                </div>
+            </div>
+
+            <p class="instructions">
+                ⌨️ Kompyuterda <b>← ↑ → ↓</b> tugmalaridan foydalaning
+                <br>
+                📱 Telefonda esa ekranni <b>surib</b> o'ynang
+            </p>
+
+        </main>
+
+        <footer>
+            <span>© 2026</span>
+            <strong> Ishlab chiqaruvchi: ULUG'BEK.R</strong>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
